@@ -60,6 +60,12 @@ public class AwsEc2Service extends AbstractLifecycleComponent<AwsEc2Service> {
         }
 
         ClientConfiguration clientConfiguration = new ClientConfiguration();
+        
+        // Source code modification test
+        if(clientConfiguration == null){
+        	// Do something
+        }
+        
         String protocol = componentSettings.get("protocol", "http").toLowerCase();
         if ("http".equals(protocol)) {
             clientConfiguration.setProtocol(Protocol.HTTP);
